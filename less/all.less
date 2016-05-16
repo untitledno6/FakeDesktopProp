@@ -1,0 +1,48 @@
+// Globals
+// =======
+
+// Color
+// -----
+@white: #FFFFFF;
+@black: #020202;
+
+// Levels
+// ------
+// @some-level: 10;
+
+// Media Queries
+// -------------
+@fat-screen: ~"all and (min-width: 1201px)";
+@wide-screen: ~"all and (min-width: 841px) and (max-width: 1200px)";
+@thin-screen: ~"all and (min-width: 531px) and (max-width: 840px)";
+@skinny-screen: ~"all and (max-width: 530px)";
+
+// Fixes
+// =====
+svg:not(:root) { overflow: hidden; }
+
+// Utils
+// =====
+.fixed { position: fixed; }
+.hidden { display: none; }
+.pointer { cursor: pointer; }
+
+// Responsiveness
+// --------------
+.show-on { display: none; }
+// ### Block
+.fat-block { @media @fat-screen { display: block; } }
+.wide-block { @media @wide-screen { display: block; } }
+.thin-block { @media @thin-screen { display: block; } }
+.skinny-block { @media @skinny-screen { display: block; } }
+// ### Inline
+.fat-inline { @media @fat-screen { display: inline; } }
+.wide-inline { @media @wide-screen { display: inline; } }
+.thin-inline { @media @thin-screen { display: inline; } }
+.skinny-inline { @media @skinny-screen { display: inline; } }
+
+// Combine Stylesheets
+// ===================
+@import (inline) "includes/reset.less";
+@import "includes/style.less";
+  
