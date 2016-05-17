@@ -19,6 +19,13 @@ gulp.task( 'default', [ 'clean', 'jade', 'less', 'js', 'copy' ] );
 
 gulp.task( 'serve', serve( './build' ) );
 
+gulp.task( 'watch', function () {
+    gulp.watch( './less/**/*.less', [ 'less' ] );
+    gulp.watch( './jade/**/*.jade', [ 'jade' ] );
+    gulp.watch( './js/**/*.js', [ 'js' ] );
+    gulp.watch( './copy/**/*.js', [ 'copy' ] );
+});
+
 // Tasks
 // =====
 gulp.task( 'clean', function () {

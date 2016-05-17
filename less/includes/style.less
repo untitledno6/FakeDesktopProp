@@ -1,0 +1,217 @@
+html, body {
+    background: #0164ae;
+    font-family: "Segoe UI";
+    -webkit-font-smoothing: antialiased;
+}
+
+@blue: #0078d7;
+
+.icons {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+
+    .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .icon-text {
+        color: white;   
+        text-shadow: 1px 1px 2px #000000;
+        font-size: 12px;
+        text-align: center;
+    }
+
+}
+
+
+
+.bar {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 40px;
+
+    .bar-apps {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url( "Startbar.png" );
+        width: 242px;
+        height: 40px;
+    }
+
+    .bar-middle {
+        position: absolute;
+        top: 0;
+        left: 242px;
+        right: 173px;
+        height: 40px;
+        background: rgba(0,35,63,1);
+        background: -moz-linear-gradient(left, rgba(0,35,63,1) 0%, rgba(0,36,65,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,35,63,1)), color-stop(100%, rgba(0,36,65,1)));
+        background: -webkit-linear-gradient(left, rgba(0,35,63,1) 0%, rgba(0,36,65,1) 100%);
+        background: -o-linear-gradient(left, rgba(0,35,63,1) 0%, rgba(0,36,65,1) 100%);
+        background: -ms-linear-gradient(left, rgba(0,35,63,1) 0%, rgba(0,36,65,1) 100%);
+        background: linear-gradient(to right, rgba(0,35,63,1) 0%, rgba(0,36,65,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00233f', endColorstr='#002441', GradientType=1 );
+
+    }
+
+    .bar-status {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url( "Startbar.png" );
+        width: 173px;
+        height: 40px;
+        background: url( "Time.png" );
+
+        .bar-status-item {
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            width: 70px;
+            position: absolute;
+            right: 5px;
+            &.time { top: 4px; }
+            &.date { top: 21px; }
+        }
+
+    }
+
+}
+
+.outlook {
+    font-size: 14px;
+    p { padding-bottom: 22px; }
+    a, a:visited { color: @blue; 
+                   border-bottom: 1px dashed #0563c1;
+                   text-decoration: none; }
+    position: absolute;
+
+    width: 1230px;
+    height: 961px;
+    background: url( "Outlook-Interface.png" );
+
+    .outlook-inbox-counter {
+        position: absolute;
+        text-align: right;
+        top: 304px;
+        left: 118px;
+        width: 100px;
+        color: white;
+        font-size: 16px;
+    }
+
+    .outlook-draft-counter {
+        position: absolute;
+        text-align: right;
+        top: 342px;
+        left: 209px;
+        color: white;
+        font-size: 16px;
+    }
+
+    .outlook-message {
+        position: absolute;
+        top: 206px;
+        left: 586px;
+    }
+
+    .outlook-list {
+        position: absolute;
+        top: 140px;
+        left: 237px;
+        width: 303px;
+        // height: 803px;
+        bottom: 18px;
+        background: #f9f9f9;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        .outlook-list-item {
+            border-bottom: 1px solid #e6e6e6;
+            height: 78px;
+            overflow: hidden;
+            position: relative;
+            background: #f9f9f9;
+
+
+            .unread {
+                position: absolute;;
+                top: 0;
+                left: 0;
+                width: 5px;
+                height: 78px;
+                background: #1f619d;
+            }
+
+            h1 {
+                position: absolute;
+                top: 10px;
+                left: 26px;
+                font-size: 18px;
+                font-weight: 100;
+                display: block;
+                overflow: hidden;
+                height: 20px;
+                width: 211px;
+                white-space: nowrap;
+            }
+
+            h2 {
+                position: absolute;
+                top: 33px;
+                left: 26px;
+                font-size: 13px;
+                font-weight: 100;
+                color: @blue;
+                display: block;
+                overflow: hidden;
+                height: 16px;
+                width: 211px;
+                white-space: nowrap;
+            }
+
+            h3 {
+                position: absolute;
+                top: 51px;
+                left: 26px;
+                font-size: 13px;
+                font-weight: 100;
+                display: block;
+                overflow: hidden;
+                height: 16px;
+                width: 211px; 
+                white-space: nowrap;
+                color: grey;
+            }
+
+            h4 {
+                position: absolute;
+                top: 51px;
+                left: 266px;
+                font-size: 13px;
+                font-weight: 100;
+                display: block;
+                overflow: hidden;
+                height: 16px;
+                width: 30px; 
+                white-space: nowrap;
+            }
+
+
+        }
+
+
+    }
+
+
+}

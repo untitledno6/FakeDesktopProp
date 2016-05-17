@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        title Inventor
+        link( rel='stylesheet', type='text/css', href='all.css' )
+    body
+        .background( data-background, data-url='./kavital.png' )
+
+        .icons( data-icons, data-grid-x=96, data-grid-y=128+100 )
+            .icon(data-icon, data-url='./icon-recycle-bin.png', data-x=0, data-y=0, data-name='Recycle Bin' )
+            .icon(data-icon, data-url='./icon-pdf.png', data-x=0, data-y=1, data-name='Boarding Pass.pdf' )
+
+        .outlook( data-outlook-config, data-messages-path='./messages-inventor.txt', data-new-message-every-min=100, data-new-message-every-max=20000 )
+
+            .outlook-inbox-counter(data-inbox-counter) 2000
+            .outlook-draft-counter 1
+
+            .outlook-list(data-inbox-list)
+                //- .outlook-list-item
+                //-     .unread
+                //-     h1 Sender's Name
+                //-     h2 Subject Line
+                //-     h3 Message
+                //-     h4 Time
+
+            .outlook-message
+                p Hey Lori,
+                p This is your message that will be on the screen when you left
+                p Here it is with a link <a href="/">theworkers.net</a> 
+        
+        .bar
+            .bar-apps
+            .bar-middle
+            .bar-status
+                .bar-status-item(data-bar-time).time  
+                    //- 12:45 PM
+                .bar-status-item(data-bar-date).date 
+                    //- 7/30/2015
+
+        script( src='jquery-2.2.0.min.js' )
+        script( src='W.min.js' )
+        script( src='main.js' )
